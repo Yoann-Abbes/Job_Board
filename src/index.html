@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+	<title>Job Board</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Poiret%20One" rel="stylesheet">
+</head>
+<body id="body">
+
+	<header>
+		<div class="nav-wrapper navbar-fixed">
+			<nav class="blue-grey ">
+				<a href="index.html" class="brand-logo center" ><img class="responsive-img" src="./assets/logo2.png" alt="logo2"></a>
+
+				<ul class="left">
+					<li >
+						<a class="btn waves-effect waves-light " href="index.html">Accueil</a>
+					</li>
+					<li >
+						<a class="btn waves-effect waves-light " href="identify.html" id="account">Inscription</a>
+					</li> 
+					<li>
+						<a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">A propos</a>
+					</li>
+				</ul>				
+				<ul class="right " > 
+
+					<li id="seconnecter">
+						<input placeholder="username" type="text" id="id" name="username" required>
+					</li>
+					<li >
+						<input placeholder="password" type="password" id="pass" name="password" required>
+					</li>
+					<li id="seco">
+					</li>
+					<li>
+						<input  type="submit" class="btn waves-effect waves-light " id="signin" value="Se connecter">
+					</li>
+					<li>
+						<input type="submit" class="btn waves-effect waves-light " id="disconnect" value="Se Déconnecter">
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+	</header>
+	<main>
+		<section>
+			<div id="introduction" class="section scrollspy text-align" >
+				<div class="fixed-action-btn">
+					<a id="menu" class="waves-effect  waves-circle  waves-lightbtn btn-floating btn-large" style="background-color:#4db6ac;">
+						<i class="material-icons">info_outline</i>
+					</a>
+				</div>
+
+				<div class="tap-target" id="tap-target" data-target="menu" style="background-color:#4db6ac;">
+					<div class="tap-target-content white-text">
+						<br><br><br><br><br><br><br><br><br><br><br>
+						<h3>Esteban Berthier & Yoann Abbes</h3>
+						<h5 class="white-text bottom center">Etudiants en 3ème année a EPITECH Montpellier, voici l'un de nos projets réalisés lors de la piscine Web.</h5>
+						<a href="http://www.epitech.eu/" target="_blank"><img src="./assets/logo.png" alt="logo"></a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="row " id="cardsrow">
+			</div>
+		</section>
+	</main>
+
+
+	<div id="myModal" class="modal fade" role="dialog">
+
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Candidature</h4>
+		</div>
+		<div class="modal-body" id="createmodal">
+			<div class="form-group">
+				<label>people_lastname</label>
+				<input type="text" id="people_lastname" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>people_firstname</label>
+				<input type="text" id="people_firstname" class="form-control" required>
+			</div> 
+			<div class="form-group">
+				<label>people_email</label>
+				<input type="text" id="people_email" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>people_number</label>
+				<input type="text" id="people_number" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>apply_message</label>
+				<input type="text" id="apply_message" class="form-control" required>
+			</div>
+			<input type="hidden" id="people_id" class="form-control">
+		</div>
+		<div class="modal-footer">
+			<a href="#" id="send" class="btn btn-primary pull-right">Envoyer</a>
+			<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Fermer</button>
+		</div>
+	</div>
+
+	<div id="myModal2" class="modal fade mymodalsize" role="dialog">
+		<div class="modal-body" >
+			<div class="form-group center">
+				<h3 class="white-text">Votre message est en cours d'envoi, veuillez patienter.</h3><br>
+			</div>
+			<div class="form-group center">
+				<div class="preloader-wrapper big active">
+					<div class="spinner-layer spinner-blue-only ">
+						<div class="circle-clipper left">
+							<div class="circle"></div>
+						</div><div class="gap-patch">
+							<div class="circle"></div>
+						</div><div class="circle-clipper right">
+							<div class="circle"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="page-footer sticky blue-grey">
+		<div class="container col s12">
+			<ul class="collapsible right">
+				<li>
+					<div class="collapsible-header blue-grey"><i class="material-icons">contacts</i>Yoann Abbes</div>
+					<div class="collapsible-body"><span>yoann1.abbes@epitech.eu</span></div>
+				</li>
+			</ul>
+			<ul class="collapsible left">
+				<li>
+					<div class="collapsible-header blue-grey"><i class="material-icons">contacts</i>Esteban Berthier</div>
+					<div class="collapsible-body"><span>esteban.berthier@epitech.eu</span></div>
+				</li>
+			</ul>
+
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$('.tap-target').tapTarget();
+			$('.collapsible').collapsible();
+
+
+			$('#apropos').click(function () {
+				console.log('test');
+				console.log($('#tap-target.tap-target'));
+				$('#tap-target.tap-target').tapTarget('open');
+			});
+
+
+		});
+	</script>
+	<script src="script/jobboard.js"></script>
+	<script src="script/auth.js"></script>
+	<script src="script/cookie.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

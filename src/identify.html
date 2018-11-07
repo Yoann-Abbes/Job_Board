@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>Job Board</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poiret%20One" rel="stylesheet">
+
+</head>
+<body id="body">
+    <header>
+        <div class="nav-wrapper navbar-fixed">
+            <nav class="blue-grey ">
+                <a href="index.html" class="brand-logo center" ><img class="responsive-img" src="./assets/logo2.png" alt="logo2"></a>
+                <ul class="left">
+                    <li >
+                        <a class="btn waves-effect waves-light " href="index.html">Accueil</a>
+                    </li>
+                    <li >
+                        <a class="btn waves-effect waves-light " href="identify.html" id="account">Inscription</a>
+                    </li> 
+
+                </ul>               
+                <ul class="right " > 
+                    <li id="seconnecter">
+                        <input placeholder="username" type="text" id="id" name="username">
+                    </li>
+                    <li >
+                        <input placeholder="password" type="password" id="pass" name="password">
+                    </li>
+                    <li id="seco">
+                    </li>
+                    <li>
+                        <a class="btn waves-effect waves-light " id="signin">Se connecter</a>
+                    </li>
+                    <li>
+                        <a class="btn waves-effect waves-light " id="disconnect">Se Déconnecter</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+
+    </main>
+    
+    <footer class="page-footer sticky blue-grey">
+        <div class="container col s12">
+            <ul class="collapsible right">
+                <li>
+                    <div class="collapsible-header blue-grey"><i class="material-icons">contacts</i>Yoann Abbes</div>
+                    <div class="collapsible-body"><span>yoann1.abbes@epitech.eu</span></div>
+                </li>
+            </ul>
+            <ul class="collapsible left">
+                <li>
+                    <div class="collapsible-header blue-grey"><i class="material-icons">contacts</i>Esteban Berthier</div>
+                    <div class="collapsible-body"><span>esteban.berthier@epitech.eu</span></div>
+                </li>
+            </ul>
+
+        </div>
+        
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            $('.tap-target').tapTarget();
+
+
+            $('#apropos').click(function () {
+                console.log('test');
+                console.log($('#tap-target.tap-target'));
+                $('#tap-target.tap-target').tapTarget('open');
+            });
+
+
+        });
+    </script>
+    <script src="script/auth.js"></script>
+    <script src="script/cookie.js"></script>
+    <script src="script/createormodifyaccount.js"></script>
+</body>
+
+</html>

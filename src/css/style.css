@@ -1,0 +1,48 @@
+*{
+font-family:"Poiret one", cursive;
+font-weight: bold!important;	
+
+}
+
+  #body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  #bodyadmin {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #BCE3FA;
+
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+ 
+ .card{
+ 	margin:10px !important;
+ 	margin-left: 25% !important;
+ 	padding:0px !important;
+ } 
+ .card-content{
+ 	overflow: auto !important;
+ }
+
+
+.tap-target-content {
+padding-right:10px !important;
+
+}
+
+.mymodalsize {
+  width:40% !important;
+  height:200px !important;
+  background-color: transparent !important;
+}
